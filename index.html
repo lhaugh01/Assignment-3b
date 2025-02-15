@@ -27,20 +27,20 @@
         var numdrinks = parseInt(prompt("How many drinks do you want", "0")) || 0;
         var totalcost = numdogs * hotdog_price + numfries * frenchfry_price + numdrinks * drink_price;
         var discount = 0;
-        document.getElementbyId(numdogs).textContent = "The total cost of hotdogs is " + numdogs * hotdog_price;
-        document.getElementbyId(numfries).textContent = "The total cost of fries is " + numfries * frenchfry_price;
-        document.getElementbyId(numdrinks).textContent = "The total cost of drinks is " + numdrinks * drink_price;
-        document.getElementbyId(totalcost).textContent = "The total cost before any changes is" + totalcost;
+        document.getElementById(numdogs).textContent = "The total cost of hotdogs is " + numdogs * hotdog_price;
+        document.getElementById(numfries).textContent = "The total cost of fries is " + numfries * frenchfry_price;
+        document.getElementById(numdrinks).textContent = "The total cost of drinks is " + numdrinks * drink_price;
+        document.getElementById(totalcost).textContent = "The total cost before any changes is" + totalcost;
         if(totalcost >= 30){
             discount = totalcost / 10;
         }
-        document.getElementbyId(discount).textContent = "Total saved is " + discount;
+        document.getElementById(discount).textContent = "Total saved is " + discount;
         var new_cost = totalcost-discount;
-        document.getElementbyId(new_cost).textContent = "New cost would be " + new_cost;
+        document.getElementById(new_cost).textContent = "New cost would be " + new_cost;
         var tax = showMoney((totalcost - discount) * 0.065);
-        document.getElementbyId(tax).textContent = "The tax will be " + tax;
+        document.getElementById(tax).textContent = "The tax will be " + tax;
         var final_total = showMoney((totalcost - discount) + tax);
-        document.getElementbyId(final_total).textContent = "Your total will be " + final_total;
+        document.getElementById(final_total).textContent = "Your total will be " + final_total;
         
     </script>
 </body>

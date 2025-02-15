@@ -29,8 +29,8 @@
         var totalcost = numdogs * hotdog_price + numfries * frenchfry_price + numdrinks * drink_price;
         var discount = 0;
         document.getElementById("numdogs").textContent = "The total cost of hotdogs is " + showMoney(numdogs * hotdog_price) + " for " + numdogs;
-        document.getElementById("numfries").textContent = "The total cost of fries is " + showMoney(numfries * frenchfry_price + " for " + numfries);
-        document.getElementById("numdrinks").textContent = "The total cost of drinks is " + showMoney(numdrinks * drink_price + " for " + numdrinks);
+        document.getElementById("numfries").textContent = "The total cost of fries is " + showMoney(numfries * frenchfry_price) + " for " + numfries;
+        document.getElementById("numdrinks").textContent = "The total cost of drinks is " + showMoney(numdrinks * drink_price) + " for " + numdrinks;
         document.getElementById("totalcost").textContent = "The total cost before any changes is " + showMoney(totalcost);
         if(totalcost >= 30){
             discount = totalcost / 10;

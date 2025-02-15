@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog Page</title>
+</head>
+<body>
+    <h1>Joe's Hotdog Stand</h1>
+    
+    <script type="text/javascript">
+        function showMoney(total){
+            return Math.round(total * 100) / 100;
+        }
+        const hotdog_price = 4.99;
+        const frenchfry_price = 3.99;
+        const drink_price = 1.79;
+        var numdogs = parseInt(prompt("How many hot dogs do you want", "0")) || 0;
+        var numfries = parseInt(prompt("How many french fries do you want", "0")) || 0;
+        var numdrinks = parseInt(prompt("How many drinks do you want", "0")) || 0;
+        var totalcost = numdogs * hotdog_price + numfries * frenchfry_price + numdrinks * drink_price;
+        var discount = 0;
+        if(totalcost >= 30){
+            discount = totalcost / 10;
+        }
+        var final_total = showMoney((totalcost - discount) * 1.065);
+        
+    </script>
+</body>
+</html>

@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>Joe's Hotdog Stand</h1>
-    
+    <p id = "numdogs"> </p>
+    <p id = "numfries"></p>
+    <p id = "numdrinks"> </p>
+    <p id = "totalcost"> </p>
+    <p id = "discount"></p>
+    <p id = "new_cost"> </p>
+    <p id = "tax"> </p>
+    <p id = "final_total"></p>
     <script type="text/javascript">
         function showMoney(total){
             return Math.round(total * 100) / 100;
@@ -28,6 +35,8 @@
             discount = totalcost / 10;
         }
         document.getElementbyId(discount).textContent = "Total saved is " + discount;
+        var new_cost = totalcost-discount;
+        document.getElementbyId(new_cost).textContent = "New cost would be " + new_cost;
         var tax = showMoney((totalcost - discount) * 0.065);
         document.getElementbyId(tax).textContent = "The tax will be " + tax;
         var final_total = showMoney((totalcost - discount) + tax);
